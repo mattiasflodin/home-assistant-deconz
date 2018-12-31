@@ -1,4 +1,11 @@
-# deCONZ and IKEA TRÅDFRI remote components for Home Assistant
+# Discontinued
+**NB** Since about a year back, Home Assistant has native support for deCONZ (partly
+based on this code) which renders this project obsolete. See [pull request #10321](https://github.com/home-assistant/home-assistant/pull/10321). The code and
+documentation is left here for future reference.
+
+---
+
+## deCONZ and IKEA TRÅDFRI remote components for Home Assistant
 This project was created to satisfy my need for controlling Home Assistant using IKEA's TRÅDFRI remotes. It uses the [deCONZ](https://www.dresden-elektronik.de/funktechnik/products/software/pc-software/deconz/) software by Dresden Elektronik to communicate with the remote, and consists of two components:
 * deconz.py: a sensor platform for sending events on the Home Assistant event bus when buttons are pressed. This is entirely independent of IKEA specifics, and should work with any sensor that is recognized by deCONZ. You can use it to build any automations you like.
 * deconz_tradfri_remote.py: a component that listens for events from IKEA remotes (as produced by deconz.py) and uses them to control scenes or individual lights in a sensible way. You can think of this as a pre-packaged set of automations implemented in Python.
